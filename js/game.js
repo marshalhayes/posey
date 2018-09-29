@@ -69,7 +69,7 @@ const p = function(s) {
   }
 
   s.draw = function() {
-    s.image(images[img.src], 0, 0, images[img.src].width, images[img.src].height);
+    s.image(images[img.src], 0, 0, s.width, s.height);
     for (let i = 0; i < imagePoses.length; i++) {
       for (let j = 0; j < imagePoses[i].pose.keypoints.length; j++) {
         let keypoint = imagePoses[i].pose.keypoints[j];
