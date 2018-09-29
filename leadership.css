@@ -2,7 +2,6 @@
     text-align: center;
 }
 
-
 #leaderboard {
     display: grid;
     grid-template-columns: 50px 50px 50px;
@@ -12,21 +11,19 @@
     font-size: 20px;
 }
 
-.playButton {
-    background-color: green;
-    font-size: 25px;
-    font-weight: bolder; 
+.btn-success {
     margin-top: 50px;
 }
 
-/* Portrait tablets and small desktops */
-@media (min-width: 768px){
-    .centerPage {    
-       margin: auto;
-       position: absolute;
-       top:40px; left:0; right:0;
-       width: 50%; 
-       height: 50%;
-       background-clip: #F5F5F5;    
-    }
+label {
+    font-size: 40px;
+}
+
+.centerPage {    
+    margin: auto;
+    position: absolute;
+    top:40px; left:0; right:0;
+    width: 50%; 
+    height: 50%;
+    padding-top: 30px; 
 }
