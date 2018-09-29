@@ -9,25 +9,29 @@ const p = function(s) {
   let skeletons = [];
 
   s.preload = function() {
-    imageJSON = s.loadJSON('http://localhost:8080/js/images.json');
+    s.loadJSON('http://localhost:8080/js/images.json', function(data) {
+      for (let i = 0; i < data["images"].length; i++) {
+        s.loadImage(data["images"][i], function(x) {
+          images[data["images"][i]] = x;
+        });
+      }
+      // Select a rnndom images from the loaded images
+      img.src = s.random(data["images"]);
+    });
   }
 
   s.setup = function() {
-    for (let i = 0; i < imageJSON["images"].length; i++) {
-        images[`${imageJSON["images"][i]}`] = s.loadImage(`${imageJSON["images"][i]}`);
-    }
-
     let canvas = s.createCanvas(500, 375);
     canvas.parent("#imagebox");
-
     poseNet = ml5.poseNet(s.modelLoaded);
 
-    // Create an <img> and attach a random url to it
-    img.src = s.random(imageJSON["images"]);
+    for (let i in images) {
+      images[i].resize(500, 375);
+    }
   }
 
   s.draw = function() {
-    s.background(images[img.src]);
+    s.image(images[img.src], 0, 0, s.width, s.height);
     for (let i = 0; i < poses.length; i++) {
       for (let j = 0; j < poses[i].pose.keypoints.length; j++) {
         let keypoint = poses[i].pose.keypoints[j];
@@ -57,8 +61,7 @@ const p = function(s) {
   }
 
   async function detectPoses() {
-    poses = await poseNet.multiPose(img);
-    console.log(poses);
+    poses = await poseNet.singlePose(img);
   }
 }
 
