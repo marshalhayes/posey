@@ -50,6 +50,13 @@ function startTimer() {
       if (misses == 0) {
         window.location.href = 'gameOver.html';
       }
+        
+      if(misses == 2){
+        $("#lifeOne").addClass("dead"); 
+      }
+      if(misses == 1){
+        $("#lifeTwo").addClass("dead"); 
+      }        
     }
   }, 1000)
 }
