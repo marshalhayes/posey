@@ -76,3 +76,14 @@ body {
   text-decoration: none;
   font-size: 16px;
 }
+#timer {
+  font-size:50px;
+  margin:0 auto;
+}
+#controls {
+  margin:0 auto;
+  width:200px;
+}
+#controls button {
+  font-size:24px;
+}

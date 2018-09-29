@@ -1,5 +1,6 @@
 {
-  "images": [
+	"images": [
+		"http://localhost:8080/assets/images/001.jpg",
     "http://localhost:8080/assets/images/002.jpg",
     "http://localhost:8080/assets/images/003.png",
     "http://localhost:8080/assets/images/004.jpg",
@@ -20,5 +21,6 @@
     "http://localhost:8080/assets/images/022.jpg",
     "http://localhost:8080/assets/images/023.jpg",
     "http://localhost:8080/assets/images/024.jpg",
-		"http://localhost:8080/assets/images/027.jpg"]
+		"http://localhost:8080/assets/images/027.jpg"
+	]
 }
