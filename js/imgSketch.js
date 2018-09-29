@@ -26,7 +26,7 @@ const p = function(s) {
     poseNet = ml5.poseNet(s.modelLoaded);
 
     for (let i in images) {
-      images[i].resize(500, 375);
+      images[i].scale(0.5);
     }
   }
 
