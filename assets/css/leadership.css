@@ -1,0 +1,29 @@
+.centerText {
+    text-align: center;
+}
+
+#leaderboard {
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px;
+    grid-column-gap: 10px;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.btn-success {
+    margin-top: 50px;
+}
+
+label {
+    font-size: 40px;
+}
+
+.centerPage {    
+    margin: auto;
+    position: absolute;
+    top:40px; left:0; right:0;
+    width: 50%; 
+    height: 50%;
+    padding-top: 30px; 
+}
