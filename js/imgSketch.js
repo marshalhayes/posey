@@ -2,14 +2,14 @@ const p = function(s) {
   let video;
   let imageUrls = ["assets/images/man-screaming.jpg", "assets/images/pexels-photo-270968.jpeg",
                   "assets/images/pexels-photo-415212.jpeg"];
-  let images = [];
+  let images = {};
   let img;
   let poses = [];
   let skeletons = [];
 
   s.preload = function() {
-    for (let i = 0; i < imageUrls; i++) {
-      images[i] = s.loadImage(imageUrls[i]);
+    for (let i = 0; i < imageUrls.length; i++) {
+      images[`http://localhost:8080/${imageUrls[i]}`] = s.loadImage(imageUrls[i]);
     }
   }
 
@@ -25,6 +25,7 @@ const p = function(s) {
   }
 
   s.draw = function() {
+    s.background(images[img.elt.src]);
     for (let i = 0; i < poses.length; i++) {
       for (let j = 0; j < poses[i].pose.keypoints.length; j++) {
         let keypoint = poses[i].pose.keypoints[j];
