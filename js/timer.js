@@ -54,6 +54,6 @@ function startTimer() {
           window.location.href = 'gameOver.html';
         }
       }
-  , 1000);
-
+    }
+  }, 1000);
 }
