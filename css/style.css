@@ -15,17 +15,17 @@ body {
     height: 800px;
 }
 #gameplay {
-    width: 80%;
-    height: 40%;
+    width: 90%;
+    height: auto;
     display: flex;
     margin: 0 auto;
-    border: 1px solid blue; 
+    border: 1px solid blue;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
     #gameplay {
         display: flex;
         flex-direction: column;
-        height: 100%;
+        height: auto;
     }
     body, #container {
         height: 100%;
@@ -43,7 +43,7 @@ h1#title {
   }
 #videobox {
     width: 500px;
-    height: 200px;
+    height: 100%;
     margin: 20px auto;
     border: 1px solid red;
 
@@ -59,10 +59,10 @@ h1#title {
 }
 #title2 {
     text-align: center;
-   
+
 }
 #directions {
-    text-align: center;   
+    text-align: center;
 }
 #playbutton {
     display: block;
