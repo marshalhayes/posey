@@ -111,3 +111,7 @@ body {
     bottom: 0;
     right: 0;
 }
+
+.dead {
+    color: red;
+}
