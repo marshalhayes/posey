@@ -22,7 +22,8 @@ const v = function(s) {
 
     for (let i = 0; i < poses.length; i++) {
       for (let j = 0; j < poses[i].pose.keypoints.length; j++) {
-        let score = int(poses[i].pose.keypoints[j].score * 255);
+        let keypoint = poses[i].pose.keypoints[j];
+        let score = s.round(keypoint.score * 255);
         s.fill(0, score, 0)
         s.noStroke();
         s.ellipse(keypoint.position.x, keypoint.position.y, 10, 10);
