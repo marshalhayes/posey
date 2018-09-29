@@ -19,7 +19,6 @@ body {
     height: auto;
     display: flex;
     margin: 0 auto;    
-
 }
 @media only screen and (max-width: 600px) {
     .text-center,.container-fluid {
@@ -53,7 +52,8 @@ h1#title {
 }
 #imagebox {
     width: 500px;
-    height: 100%;
+    /*Height is placeholder only */
+    height: 375px;
     margin: 20px auto;
     border: 1px solid green;
 }
@@ -78,4 +78,25 @@ h1#title {
 }
 #controls button {
   font-size:24px;
+}
+#gameNav {
+    display: flex;
+    right: 0;
+    position:absolute;
+}
+#gameButton {
+     font-size: 8pt;
+     font-family: tahoma;
+     margin-top: 1px;
+     margin-right: 5px; 
+     top:0;
+     right:0;
+}
+.char {
+    margin: 15px;
+}
+#iconFooter {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }

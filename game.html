@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Posey</title>
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/leadership.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://unpkg.com/ml5@0.1.1/dist/ml5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
@@ -15,6 +17,14 @@
 </head>
 
 <body>
+  <nav id="gameNav">
+  <!--  <i class=" char fa fa-male fa-5x"></i>
+    <i class=" char fa fa-male fa-5x"></i>
+    <i class=" char fa fa-male fa-5x"></i> -->
+    <div class="char" id="gameButton">
+          <button type="button" class="btn btn-danger btn-sm">Exit</button>
+    </div>
+  </nav>
   <h1 class="text-center">Posey</h1>
   <main class="container-fluid">
   <div class="text-center" id="timer">
@@ -23,7 +33,7 @@
   </div>
 <div id="controls">
 </div>
-
+    
     <section id="gameplay">
       <div id="videobox"></div>
       <div id="imagebox"></div>
@@ -34,6 +44,12 @@
     </section>
     <div class="text-center">
       <button class="btn-success btn-lg" onclick="location.href='game.html'">Score Here</button>
+    </div>
+    <div id="iconFooter">
+      <i class=" char fa fa-male fa-5x"></i>
+      <i class=" char fa fa-male fa-5x"></i>
+      <i class=" char fa fa-male fa-5x"></i>
+    </div>
   </main>
   <div id="test">
   </div>

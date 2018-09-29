@@ -39,3 +39,8 @@ label {
 .fa {
     display: block;
 }
+
+#exitButton {
+    position:absolute;
+    right:0;
+}
