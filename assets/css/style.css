@@ -41,7 +41,7 @@ body {
   }
 
   body {
-    background-image: url("/assets/images/warning.jpeg");
+    background-image: url("./assets/images/warning.jpeg");
     z-index: +1;
     background-repeat: no-repeat;
     background-size: contain;
@@ -99,7 +99,7 @@ body {
      font-size: 8pt;
      font-family: tahoma;
      margin-top: 1px;
-     margin-right: 5px; 
+     margin-right: 5px;
      top:0;
      right:0;
 }
@@ -111,4 +111,3 @@ body {
     bottom: 0;
     right: 0;
 }
-
