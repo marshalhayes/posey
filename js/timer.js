@@ -1,6 +1,7 @@
 var hours = 0;
 var mins = 0;
 var seconds = 0;
+var misses = 0;
 
 $(document).ready(function() {
   startTimer();
@@ -43,5 +44,13 @@ function startTimer() {
     }
 
     startTimer();
+
+    if(seconds == 5 && misses > 0) {
+      seconds = -1;
+      misses--;
+      if(misses == 0) {
+        window.location.href = 'gameOver.html';
+      }
+    }
   }, 1000);
 }
