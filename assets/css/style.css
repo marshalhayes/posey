@@ -20,18 +20,23 @@ body {
     display: flex;
     margin: 0 auto;
     border: 1px solid blue;
+    
 }
 @media only screen and (max-width: 1000px) {
-    #gameplay {
-        display: flex;
-        flex-direction: column;
-        height: auto;
+    .text-center,.container-fluid {
+        display: none;
     }
     body, #container {
         height: auto;
     }
+    body {
+    background-image: url("/assets/images/warning.jpeg");
+    z-index: +1;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
-container {
+}
+#container {
     max-height: 80%;
 }
 h1#title {
