@@ -1,0 +1,15 @@
+body {
+       margin: auto;
+       position: absolute;
+       top:40px;
+       width: 50%; 
+       height: 50%;
+}
+
+.centerText {
+    text-align: center;
+}
+
+#YesNoButton {
+    margin-right: 30px;
+}
