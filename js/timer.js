@@ -1,9 +1,20 @@
 var hours =0;
 var mins =0;
 var seconds =0;
+var misses = 3;
 
 $( document ).ready(function(){
       startTimer();
+      /*
+      while(true) {
+        if(seconds == 5) {
+          misses--;
+          console.log(misses);
+          break;
+        }
+      }
+      */
+      //else if match, increment point and reset timer
 });
 
 $('#stop').click(function(){
@@ -36,6 +47,14 @@ function startTimer(){
      
     
       startTimer();
+
+      if(seconds == 5 && misses > 0){
+        seconds = -1;
+        misses--;
+        if(misses == 0) {
+          window.location.href = 'gameOver.html';
+        }
+      }
   },1000);
 }
     
