@@ -1,9 +1,6 @@
 body {
        margin: auto;
-       position: absolute;
-       top:40px;
-       width: 50%; 
-       height: 50%;
+       padding-top: 30px;
 }
 
 .centerText {
@@ -12,4 +9,12 @@ body {
 
 #YesNoButton {
     margin-right: 30px;
+}
+
+.pageTitle {
+    font-size: 60px;    
+}
+
+p {
+    font-size: 30px;
 }
