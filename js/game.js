@@ -66,10 +66,15 @@ const p = function(s) {
     let canvas = s.createCanvas(500, 375);
     canvas.parent("#imagebox");
     poseNet = ml5.poseNet(s.modelLoaded);
+
+    for (let i in images) {
+      images[i].resize(500, 375);
+    }
   }
 
   s.draw = function() {
-    s.image(images[img.src], 0, 0, s.width, s.height);
+    s.background(images[img.src]);
+    // s.image(images[img.src], 0, 0, s.width, s.height);
     for (let i = 0; i < imagePoses.length; i++) {
       for (let j = 0; j < imagePoses[i].pose.keypoints.length; j++) {
         let keypoint = imagePoses[i].pose.keypoints[j];
