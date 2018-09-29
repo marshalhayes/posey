@@ -50,7 +50,7 @@ h1#title {
 }
 #imagebox {
     width: 500px;
-    height: 200px;
+    height: 100%;
     margin: 20px auto;
     border: 1px solid green;
 }
