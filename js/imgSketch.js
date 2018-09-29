@@ -2,26 +2,28 @@ let img = document.getElementById('img');
 
 const p = function(s) {
   let video;
-  let imageUrls = ["assets/images/man-screaming.jpg", "assets/images/pexels-photo-1058949.jpeg", "assets/images/vanna-white-man.jpg"];
-  let images = {};
+  let imageJSON;
+  let images = {}
   let poseNet;
   let poses = [];
   let skeletons = [];
 
   s.preload = function() {
-    for (let i = 0; i < imageUrls.length; i++) {
-      images[`http://localhost:8080/${imageUrls[i]}`] = s.loadImage(imageUrls[i]);
-    }
+    imageJSON = s.loadJSON('http://localhost:8080/js/images.json');
   }
 
   s.setup = function() {
+    for (let i = 0; i < imageJSON["images"].length; i++) {
+        images[`${imageJSON["images"][i]}`] = s.loadImage(`${imageJSON["images"][i]}`);
+    }
+
     let canvas = s.createCanvas(500, 375);
     canvas.parent("#imagebox");
 
     poseNet = ml5.poseNet(s.modelLoaded);
 
     // Create an <img> and attach a random url to it
-    img.src = s.random(imageUrls);
+    img.src = s.random(imageJSON["images"]);
   }
 
   s.draw = function() {
@@ -29,7 +31,7 @@ const p = function(s) {
     for (let i = 0; i < poses.length; i++) {
       for (let j = 0; j < poses[i].pose.keypoints.length; j++) {
         let keypoint = poses[i].pose.keypoints[j];
-        if (keypoint.score > 0.5) {
+        if (keypoint.score > 0.2) {
           let score = s.round(keypoint.score * 255);
           s.fill(255 - score, score, 0);
           s.noStroke();
@@ -40,9 +42,11 @@ const p = function(s) {
         let partA = poses[i].skeleton[j][0];
         let partB = poses[i].skeleton[j][1];
         let keypoint = poses[i].pose.keypoints[j]
-        let score = s.round(keypoint.score * 255);
-        s.stroke(255 - score, score, 0);
-        s.line(partA.position.x, partA.position.y, partB.position.x, partB.position.y);
+        if (keypoint.score > 0.2) {
+          let score = s.round(keypoint.score * 255);
+          s.stroke(255 - score, score, 0);
+          s.line(partA.position.x, partA.position.y, partB.position.x, partB.position.y);
+        }
       }
     }
   }
