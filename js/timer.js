@@ -1,9 +1,21 @@
-var hours = 0;
-var mins = 0;
-var seconds = 0;
+var hours =0;
+var mins =0;
+var seconds =0;
+var misses = 3;
 
-$(document).ready(function() {
-  startTimer();
+$( document ).ready(function(){
+      startTimer();
+      /*
+      while(true) {
+        if(seconds == 5) {
+          misses--;
+          console.log(misses);
+          break;
+        }
+      }
+      */
+      //else if match, increment point and reset timer
+
 });
 
 $('#stop').click(function() {
@@ -31,18 +43,17 @@ function startTimer() {
           $("#hours").text('0' + hours + ':')
         } else $("#hours").text(hours + ':');
       }
+     
+    
+      startTimer();
 
-      if (mins < 10) {
-        $("#mins").text('0' + mins + ':');
-      } else $("#mins").text(mins + ':');
-    }
-    if (seconds < 10) {
-      $("#seconds").text('0' + seconds);
-    } else {
-      $("#seconds").text(seconds);
-    }
+      if(seconds == 5 && misses > 0){
+        seconds = -1;
+        misses--;
+        if(misses == 0) {
+          window.location.href = 'gameOver.html';
+        }
+      }
+  },1000);
 
-
-    startTimer();
-  }, 1000);
 }
