@@ -18,11 +18,9 @@ body {
     width: 90%;
     height: auto;
     display: flex;
-    margin: 0 auto;
-    border: 1px solid blue;
-    
+    margin: 0 auto;    
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 600px) {
     .text-center,.container-fluid {
         display: none;
     }
@@ -69,4 +67,15 @@ h1#title {
     padding: 15px 32px;
     text-decoration: none;
     font-size: 16px;
+}
+#timer {
+  font-size:50px;
+  margin:0 auto;
+}
+#controls {
+  margin:0 auto;
+  width:200px;    
+}
+#controls button {
+  font-size:24px;
 }
