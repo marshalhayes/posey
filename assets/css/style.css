@@ -41,7 +41,7 @@ body {
   }
 
   body {
-    background-image: url("./assets/images/warning.jpeg");
+    background-image: url("../images/warning.jpeg");
     z-index: +1;
     background-repeat: no-repeat;
     background-size: contain;
