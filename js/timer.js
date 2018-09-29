@@ -43,8 +43,8 @@ function startTimer() {
           $("#hours").text('0' + hours + ':')
         } else $("#hours").text(hours + ':');
       }
-     
-    
+
+
       startTimer();
 
       if(seconds == 5 && misses > 0){
@@ -54,6 +54,6 @@ function startTimer() {
           window.location.href = 'gameOver.html';
         }
       }
-  },1000);
+  , 1000);
 
 }
