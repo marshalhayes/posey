@@ -26,12 +26,21 @@ const p = function(s) {
     poseNet = ml5.poseNet(s.modelLoaded);
 
     for (let i in images) {
-      images[i].scale(0.5);
+      let imgRatio = images[i].width / images[i].height;
+      let canvasRatio = s.width / s.height;
+      if (imgRatio >= canvasRatio) {
+        let k = s.height / images[i].height;
+        images[i].resize(images[i].height * k, images[i].width * k);
+      }
+      else {
+        let k = s.width / images[i].width;
+        images[i].resize(images[i].height * k, images[i].width * k);
+      }
     }
   }
 
   s.draw = function() {
-    s.image(images[img.src], 0, 0, s.width, s.height);
+    s.image(images[img.src], 0, 0, images[img.src].width, images[img.src].height);
     for (let i = 0; i < poses.length; i++) {
       for (let j = 0; j < poses[i].pose.keypoints.length; j++) {
         let keypoint = poses[i].pose.keypoints[j];
