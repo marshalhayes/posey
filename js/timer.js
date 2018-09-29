@@ -1,21 +1,10 @@
-var hours =0;
-var mins =0;
-var seconds =0;
-var misses = 3;
+let hours = 0;
+let mins = 0;
+let seconds = 0;
+let misses = 3;
 
-$( document ).ready(function(){
-      startTimer();
-      /*
-      while(true) {
-        if(seconds == 5) {
-          misses--;
-          console.log(misses);
-          break;
-        }
-      }
-      */
-      //else if match, increment point and reset timer
-
+$(document).ready(function() {
+  startTimer();
 });
 
 $('#stop').click(function() {
@@ -36,24 +25,31 @@ function startTimer() {
     if (seconds > 59) {
       seconds = 0;
       mins++;
-      if (mins > 59) {
-        mins = 0;
-        hours++;
-        if (hours < 10) {
-          $("#hours").text('0' + hours + ':')
-        } else $("#hours").text(hours + ':');
-      }
+    }
+    if (mins > 59) {
+      mins = 0;
+    }
 
+    if (mins < 10) {
+      $("#mins").text('0' + mins + ':');
+    } else {
+      $("#mins").text(mins + ':');
+    }
 
-      startTimer();
+    if (seconds < 10) {
+      $("#seconds").text('0' + seconds);
+    } else {
+      $("#seconds").text(seconds);
+    }
 
-      if(seconds == 5 && misses > 0){
-        seconds = -1;
-        misses--;
-        if(misses == 0) {
-          window.location.href = 'gameOver.html';
-        }
+    startTimer();
+
+    if (seconds == 5 && misses > 0) {
+      seconds = -1;
+      misses--;
+      if (misses == 0) {
+        window.location.href = 'gameOver.html';
       }
     }
-  }, 1000);
+  }, 1000)
 }
