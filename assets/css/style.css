@@ -37,6 +37,7 @@ body {
 
   body, #container {
     height: auto;
+
   }
 
   body {
@@ -45,6 +46,7 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
   }
+
 }
 
 #container {
@@ -59,10 +61,11 @@ body {
 }
 
 #imagebox {
-  width: 500px;
-  height: 100%;
-  margin: 20px auto;
-  border: 1px solid green;
+    width: 500px;
+    /*Height is placeholder only */
+    height: 375px;
+    margin: 20px auto;
+    border: 1px solid green;
 }
 
 #playbutton {
@@ -87,3 +90,25 @@ body {
 #controls button {
   font-size:24px;
 }
+#gameNav {
+    display: flex;
+    right: 0;
+    position:absolute;
+}
+#gameButton {
+     font-size: 8pt;
+     font-family: tahoma;
+     margin-top: 1px;
+     margin-right: 5px; 
+     top:0;
+     right:0;
+}
+.char {
+    margin: 15px;
+}
+#iconFooter {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
