@@ -54,16 +54,6 @@ h1#title {
     margin: 20px auto;
     border: 1px solid green;
 }
-#title1 {
-    text-align: center;
-}
-#title2 {
-    text-align: center;
-
-}
-#directions {
-    text-align: center;
-}
 #playbutton {
     display: block;
     text-align: center;
