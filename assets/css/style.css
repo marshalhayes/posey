@@ -19,6 +19,7 @@ body {
     height: auto;
     display: flex;
     margin: 0 auto;    
+
 }
 @media only screen and (max-width: 600px) {
     .text-center,.container-fluid {
@@ -28,11 +29,11 @@ body {
         height: auto;
     }
     body {
-    background-image: url("/assets/images/warning.jpeg");
-    z-index: +1;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
+      background-image: url("/assets/images/warning.jpeg");
+      z-index: +1;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
 }
 #container {
     max-height: 80%;
@@ -49,7 +50,6 @@ h1#title {
     height: 100%;
     margin: 20px auto;
     border: 1px solid red;
-
 }
 #imagebox {
     width: 500px;
