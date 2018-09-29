@@ -1,7 +1,7 @@
 {
 	"images": ["http://localhost:8080/001.jpg",
 			   "http://localhost:8080/002.jpg",
-			   "http://localhost:8080/003.jpg",
+			   "http://localhost:8080/003.png",
 			   "http://localhost:8080/004.jpg",
 			   "http://localhost:8080/005.jpg",
 			   "http://localhost:8080/006.jpg",
@@ -15,7 +15,7 @@
 			   "http://localhost:8080/014.jpg",
 			   "http://localhost:8080/015.jpg",
 			   "http://localhost:8080/016.jpg",
-			   "http://localhost:8080/017.jpg",
+			   "http://localhost:8080/017.jpeg",
 			   "http://localhost:8080/018.jpg",
 			   "http://localhost:8080/019.jpg",
 			   "http://localhost:8080/020.jpg",
@@ -24,5 +24,6 @@
 			   "http://localhost:8080/023.jpg",
 			   "http://localhost:8080/024.jpg",
 			   "http://localhost:8080/025.jpg",
-			   "http://localhost:8080/026.jpg"]
+			   "http://localhost:8080/026.jpg",
+			   "http://localhost:8080/027.jpeg"]
 }
