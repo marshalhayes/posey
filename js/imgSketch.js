@@ -2,21 +2,25 @@ let img = document.getElementById('img');
 
 const p = function(s) {
   let video;
-  let imageUrls = ["assets/images/man-screaming.jpg", "assets/images/pexels-photo-1058949.jpeg", "assets/images/vanna-white-man.jpg"];
-  let images = {};
+  let imageJSON;
+  let images = {}
   let poseNet;
   let poses = [];
   let skeletons = [];
 
   s.preload = function() {
-    for (let i = 0; i < imageUrls.length; i++) {
-      images[`http://localhost:8080/${imageUrls[i]}`] = s.loadImage(imageUrls[i]);
-    }
+    imageJSON = s.loadJSON('http://localhost:8080/js/images.json');
   }
 
   s.setup = function() {
+    for (let i = 0; i < imageJSON["images"].length; i++) {
+        images[`${imageJSON["images"][i]}`] = s.loadImage(`${imageJSON["images"][i]}`);
+    }
+
     let canvas = s.createCanvas(500, 375);
     canvas.parent("#imagebox");
+
+    console.log(images);
 
     poseNet = ml5.poseNet(s.modelLoaded);
 

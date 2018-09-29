@@ -20,7 +20,7 @@ body {
     display: flex;
     margin: 0 auto;
     border: 1px solid blue;
-    
+
 }
 @media only screen and (max-width: 1000px) {
     .text-center,.container-fluid {
@@ -30,11 +30,11 @@ body {
         height: auto;
     }
     body {
-    background-image: url("/assets/images/warning.jpeg");
-    z-index: +1;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
+      background-image: url("/assets/images/warning.jpeg");
+      z-index: +1;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
 }
 #container {
     max-height: 80%;
