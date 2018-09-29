@@ -45,7 +45,7 @@ const v = function(s) {
 }
 
 const p = function(s) {
-  let video;
+  let img = document.getElementById('img');
   let imageJSON;
   let images = {}
   let poseNet;
@@ -57,7 +57,7 @@ const p = function(s) {
           images[data["images"][i]] = x;
         });
       }
-      // Select a rnndom images from the loaded images
+      // Select a random images from the loaded images
       img.src = s.random(data["images"]);
     });
   }
@@ -69,7 +69,6 @@ const p = function(s) {
   }
 
   s.draw = function() {
-    // s.background(images[img.src]);
     s.image(images[img.src], 0, 0, images[img.src].width, images[img.src].height);
     for (let i = 0; i < imagePoses.length; i++) {
       for (let j = 0; j < imagePoses[i].pose.keypoints.length; j++) {
