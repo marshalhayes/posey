@@ -23,8 +23,8 @@ const v = function(s) {
     for (let i = 0; i < poses.length; i++) {
       for (let j = 0; j < poses[i].pose.keypoints.length; j++) {
         let keypoint = poses[i].pose.keypoints[j];
-		let score = keypoint.score * 255;
-        s.fill(255 - score, score, 0)
+        let score = s.round(keypoint.score * 255);
+        s.fill(255 - score, score, 0);
         s.noStroke();
         s.ellipse(keypoint.position.x, keypoint.position.y, 10, 10);
       }
@@ -32,7 +32,7 @@ const v = function(s) {
         let partA = poses[i].skeleton[j][0];
         let partB = poses[i].skeleton[j][1];
         let score = poses[i].pose.keypoints[j].score * 255
-		s.stroke(255 - score, score, 0);
+    		s.stroke(255 - score, score, 0);
         s.line(partA.position.x, partA.position.y, partB.position.x, partB.position.y);
       }
     }
