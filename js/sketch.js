@@ -27,6 +27,12 @@ function draw() {
         ellipse(keypoint.position.x, keypoint.position.y, 10, 10);
       }
     }
+    for (let j = 0; j < poses[i].skeleton.length; j++) {
+      let partA = poses[i].skeleton[j][0];
+      let partB = poses[i].skeleton[j][1];
+      stroke(255, 0, 0);
+      line(partA.position.x, partA.position.y, partB.position.x, partB.position.y);
+    }
   }
 }
 
