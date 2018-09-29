@@ -4,8 +4,9 @@ const v = function(s) {
   let skeletons = [];
 
   s.setup = function() {
-    s.createCanvas(640, 480);
-    
+    let canvas = s.createCanvas(500, 375);
+    canvas.parent("#videobox");
+
     video = s.createCapture(s.VIDEO);
     video.size(s.width, s.height);
     video.hide();
