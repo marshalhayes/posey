@@ -7,6 +7,7 @@
     display: grid;
     grid-template-columns: 50px 50px 50px;
     grid-template-rows: 50px;
+    grid-column-gap: 10px;
     justify-content: space-around;
     font-size: 20px;
 }
@@ -14,6 +15,18 @@
 .playButton {
     background-color: green;
     font-size: 25px;
-    font-weight: bolder;
-    
+    font-weight: bolder; 
+    margin-top: 50px;
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px){
+    .centerPage {    
+       margin: auto;
+       position: absolute;
+       top:40px; left:0; right:0;
+       width: 50%; 
+       height: 50%;
+       background-clip: #F5F5F5;    
+    }
 }
