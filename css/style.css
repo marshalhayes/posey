@@ -19,7 +19,7 @@ body {
     height: 40%;
     display: flex;
     margin: 0 auto;
-    border: 1px solid blue; 
+    border: 1px solid blue;
 }
 @media only screen and (max-width: 700px) {
     #gameplay {
@@ -59,10 +59,10 @@ h1#title {
 }
 #title2 {
     text-align: center;
-   
+
 }
 #directions {
-    text-align: center;   
+    text-align: center;
 }
 #playbutton {
     display: block;
