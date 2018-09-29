@@ -51,7 +51,7 @@ const p = function(s) {
   let poseNet;
 
   s.preload = function() {
-    s.loadJSON('http://localhost:8080/js/images.json', function(data) {
+    s.loadJSON('./images.json', function(data) {
       for (let i = 0; i < data["images"].length; i++) {
         s.loadImage(data["images"][i], function(x) {
           images[data["images"][i]] = x;
