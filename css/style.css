@@ -1,0 +1,36 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#container {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    display: flex;
+    border: 1px solid blue;
+
+}
+h1#title {
+    margin: 0 auto;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+  }
+#videobox {
+    width: 500px;
+    height: 300px;
+    margin: 10% auto;
+    border: 1px solid red;
+
+}
+#imagebox {
+    width: 500px;
+    height: 300px;
+    margin: 10% auto;
+    border: 1px solid green;
+}
+#title1 {
+    text-align: center;
+}
