@@ -1,6 +1,6 @@
-let hours = 0;
+
 let mins = 0;
-let seconds = 0;
+let seconds = 11;
 let misses = 3;
 
 $(document).ready(function() {
@@ -12,30 +12,13 @@ $('#stop').click(function() {
 });
 
 $('#reset').click(function() {
-  hours = 0;
-  mins = 0;
   seconds = 0;
-  $('#hours', '#mins').html('00:');
   $('#seconds').html('00');
 });
 
 function startTimer() {
   timex = setTimeout(function() {
-    seconds++;
-    if (seconds > 59) {
-      seconds = 0;
-      mins++;
-    }
-    if (mins > 59) {
-      mins = 0;
-    }
-
-    if (mins < 10) {
-      $("#mins").text('0' + mins + ':');
-    } else {
-      $("#mins").text(mins + ':');
-    }
-
+    seconds--;
     if (seconds < 10) {
       $("#seconds").text('0' + seconds);
     } else {
@@ -51,23 +34,23 @@ function startTimer() {
             $("#timer").addClass("dead");
             audio.play();
             break;
-        case 6:
+        case 4:
             $("#timer").removeClass("dead");
             audio.play();
             break;
-        case 7:
+        case 3:
             $("#timer").addClass("dead");
             audio.play();
             break;
-        case 8:
+        case 2:
             $("#timer").removeClass("dead");
             audio.play();
             break;
-        case 9:
+        case 1:
             $("#timer").addClass("dead");
             audio.play();
             break; 
-        case 10:
+        case 0:
             $("#timer").removeClass("dead");
             audio.play();
             break;               
@@ -75,8 +58,8 @@ function startTimer() {
             $("#seconds").removeClass("dead");  
       }       
 
-    if (seconds == 10 && misses > 0) {
-      seconds = -1;
+    if (seconds == 0  && misses > 0) {
+      seconds = 11 ;
       misses--;
       if (misses == 0) {
         window.location.href = 'gameOver.html';
