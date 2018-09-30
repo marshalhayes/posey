@@ -3,6 +3,17 @@ let imagePoses = [];
 
 const v = function(s) {
   let video;
+  let options = {
+	imageScaleFactor: 0.3,
+	outputStride: 16,
+	flipHorizontal: false,
+	minConfidence: 0.20,
+	maxPoseDetections: 3,
+	scoreThreshold: 0.6,
+	nmsRadius: 20,
+	detectionType: 'single',
+	multiplier: 0.75
+	}
 
   s.setup = function() {
     let canvas = s.createCanvas(500, 375);
@@ -12,7 +23,7 @@ const v = function(s) {
     video.size(s.width, s.height);
     video.hide();
 
-    const poseNet = ml5.poseNet(video, s.modelLoaded);
+    const poseNet = ml5.poseNet(video, options, s.modelLoaded);
     poseNet.on('pose', function (results) {
       videoPoses = results;
     });
