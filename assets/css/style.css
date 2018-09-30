@@ -30,8 +30,9 @@ body {
 }
 
 #mainTitle {
-  font-family: 'Alfa Slab One', cursive;
+  font-family: 'Roboto', sans-serif;
   font-size: 3rem;
+  font-weight:400;
 }
 @media only screen and (max-width: 1000px) {
   .text-center, .container-fluid {
