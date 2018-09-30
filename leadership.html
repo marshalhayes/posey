@@ -78,11 +78,10 @@
     firebase.initializeApp(config);
   </script>
   <script>
-  let data;
     document.addEventListener("DOMContentLoaded", function() {
       firebase.database().ref('users').once('value').then(function(snapshot) {
         let index = 1;
-        data = snapshot.val();
+        let data = snapshot.val();
         for (let i in data) {
           let rank = document.getElementById('leaderboard').appendChild(document.createElement("div"));
           rank.innerText = index;

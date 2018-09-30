@@ -1,18 +1,20 @@
 let videoPoses = [];
 let imagePoses = [];
 
+let averageDeviation = 0;
+
 const v = function(s) {
   let video;
   let options = {
-	imageScaleFactor: 0.3,
-	outputStride: 16,
-	flipHorizontal: false,
-	minConfidence: 0.20,
-	maxPoseDetections: 3,
-	scoreThreshold: 0.6,
-	nmsRadius: 20,
-	detectionType: 'single',
-	multiplier: 0.75
+  	imageScaleFactor: 0.3,
+  	outputStride: 16,
+  	flipHorizontal: false,
+  	minConfidence: 0.20,
+  	maxPoseDetections: 3,
+  	scoreThreshold: 0.6,
+  	nmsRadius: 20,
+  	detectionType: 'single',
+  	multiplier: 0.75
 	}
 
   s.setup = function() {
@@ -39,11 +41,32 @@ const v = function(s) {
         s.fill(255 - score, score, 0);
         s.noStroke();
         s.ellipse(keypoint.position.x, keypoint.position.y, 10, 10);
+
+        switch (keypoint.part) {
+          case 'rightEye':
+            for (let x = 0; x < imagePoses.length; x++) {
+              for (let y = 0; y < imagePoses[x].pose.keypoints.length; y++) {
+                let imgKeypoint = imagePoses[x].pose.keypoints[y];
+                if (imgKeypoint.part == "rightEye") {
+                  // If the part is a righteye..., check the pixel location of the video rightEye and compare
+                  // let xDeviation = imgKeypoint.position.x - keypoint.position.x;
+                  // let yDeviation = imgKeypoint.position.y - keypoint.position.y;
+                  // averageDeviation += (xDeviation + yDeviation);
+                  // averageDeviation = averageDeviation / imagePoses.length;
+                  if ((imgKeypoint.position.x - keypoint.position.x) < 10 && (imgKeypoint.position.y - keypoint.position.y) < 10) {
+                    alert("You win!");
+                  }
+                }
+              }
+            }
+            break;
+          default:
+        }
       }
       for (let j = 0; j < videoPoses[i].skeleton.length; j++) {
         let partA = videoPoses[i].skeleton[j][0];
         let partB = videoPoses[i].skeleton[j][1];
-        let score = videoPoses[i].pose.keypoints[j].score * 255
+        let score = videoPoses[i].pose.keypoints[j].score * 255;
     		s.stroke(255 - score, score, 0);
         s.line(partA.position.x, partA.position.y, partB.position.x, partB.position.y);
       }
@@ -110,7 +133,6 @@ const p = function(s) {
   }
 
   s.modelLoaded = function() {
-    console.log('Model Loaded!');
     detectPoses();
   }
 
