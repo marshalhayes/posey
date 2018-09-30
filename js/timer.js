@@ -43,8 +43,31 @@ function startTimer() {
     }
 
     startTimer();
+      
+      switch(seconds){
+        case 5:
+            $("#timer").addClass("dead");
+            break;
+        case 6:
+            $("#timer").removeClass("dead");
+            break;
+        case 7:
+            $("#timer").addClass("dead");
+            break;
+        case 8:
+            $("#timer").removeClass("dead");
+            break;
+        case 9:
+            $("#timer").addClass("dead");
+            break; 
+        case 10:
+            $("#timer").removeClass("dead");
+            break;               
+        default:
+            $("#seconds").removeClass("dead");  
+      }       
 
-    if (seconds == 5 && misses > 0) {
+    if (seconds == 10 && misses > 0) {
       seconds = -1;
       misses--;
       if (misses == 0) {
@@ -57,6 +80,7 @@ function startTimer() {
       if(misses == 1){
         $("#lifeTwo").addClass("dead"); 
       }        
-    }
+    }      
+     
   }, 1000)
 }
