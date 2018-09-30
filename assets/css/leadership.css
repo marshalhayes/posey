@@ -27,13 +27,13 @@ label {
     font-size: 40px;
 }
 
-.centerPage {    
+.centerPage {
     margin: auto;
     position: absolute;
     top:40px; left:0; right:0;
-    width: 50%; 
+    width: 50%;
     height: 50%;
-    padding-top: 30px; 
+    padding-top: 30px;
 }
 
 .fa {
