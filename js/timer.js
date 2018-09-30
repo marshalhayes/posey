@@ -58,5 +58,6 @@ function startTimer() {
         $("#lifeTwo").addClass("dead"); 
       }        
     }
-  }, 1000)
+  }, 1000);
 }
+
