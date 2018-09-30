@@ -49,6 +49,19 @@
   </main>
   <div id="test"></div>
   <img src="" id="img" width="500px" height="375px" style="display: none;">
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBYAXYgxIOmpEQ-ZTM27NcppTbt1wrkvQY",
+      authDomain: "posey-1a2e6.firebaseapp.com",
+      databaseURL: "https://posey-1a2e6.firebaseio.com",
+      projectId: "posey-1a2e6",
+      storageBucket: "posey-1a2e6.appspot.com",
+      messagingSenderId: "396409349439"
+    };
+    firebase.initializeApp(config);
+  </script>
   <script src="./js/game.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/timer.js"></script>

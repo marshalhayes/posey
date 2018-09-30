@@ -30,7 +30,7 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <form action="leadership.html" method="">
+            <form id="firebase-form">
               <div class="modal-body">
                 <label for="userName">Username</label>
                 <input class="form-control" type="text" id="userName" placeholder="Enter a username" required>
@@ -45,6 +45,20 @@
       <button type="button" class="btn btn-primary" onclick="location.href='leadership.html'">No</button>
    </div>
   </div>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBYAXYgxIOmpEQ-ZTM27NcppTbt1wrkvQY",
+      authDomain: "posey-1a2e6.firebaseapp.com",
+      databaseURL: "https://posey-1a2e6.firebaseio.com",
+      projectId: "posey-1a2e6",
+      storageBucket: "posey-1a2e6.appspot.com",
+      messagingSenderId: "396409349439"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="./js/fire.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
