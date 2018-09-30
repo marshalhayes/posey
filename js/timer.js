@@ -43,8 +43,39 @@ function startTimer() {
     }
 
     startTimer();
+     
+      var audio = new Audio("./assets/beep-02.mp3"); 
+      
+      switch(seconds){
+        case 5:
+            $("#timer").addClass("dead");
+            audio.play();
+            break;
+        case 6:
+            $("#timer").removeClass("dead");
+            audio.play();
+            break;
+        case 7:
+            $("#timer").addClass("dead");
+            audio.play();
+            break;
+        case 8:
+            $("#timer").removeClass("dead");
+            audio.play();
+            break;
+        case 9:
+            $("#timer").addClass("dead");
+            audio.play();
+            break; 
+        case 10:
+            $("#timer").removeClass("dead");
+            audio.play();
+            break;               
+        default:
+            $("#seconds").removeClass("dead");  
+      }       
 
-    if (seconds == 5 && misses > 0) {
+    if (seconds == 10 && misses > 0) {
       seconds = -1;
       misses--;
       if (misses == 0) {
@@ -57,6 +88,8 @@ function startTimer() {
       if(misses == 1){
         $("#lifeTwo").addClass("dead"); 
       }        
+
     }
-  }, 1000)
+  }, 1000);
 }
+
