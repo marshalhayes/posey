@@ -1,6 +1,7 @@
 html {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cfe7fa', endColorstr='#6393c1', GradientType=0);
   /* IE6-9 */
+  background-repeat: no-repeat;
 }
 
 #container {
