@@ -43,25 +43,33 @@ function startTimer() {
     }
 
     startTimer();
+     
+      var audio = new Audio("./assets/beep-02.mp3"); 
       
       switch(seconds){
         case 5:
             $("#timer").addClass("dead");
+            audio.play();
             break;
         case 6:
             $("#timer").removeClass("dead");
+            audio.play();
             break;
         case 7:
             $("#timer").addClass("dead");
+            audio.play();
             break;
         case 8:
             $("#timer").removeClass("dead");
+            audio.play();
             break;
         case 9:
             $("#timer").addClass("dead");
+            audio.play();
             break; 
         case 10:
             $("#timer").removeClass("dead");
+            audio.play();
             break;               
         default:
             $("#seconds").removeClass("dead");  
