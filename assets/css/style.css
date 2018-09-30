@@ -1,7 +1,6 @@
 html {
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 
 body {
@@ -33,6 +32,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 3rem;
   font-weight:400;
+  margin:5px auto;
 }
 @media only screen and (max-width: 1000px) {
   .text-center, .container-fluid {
@@ -60,14 +60,14 @@ body {
 #videobox {
   width: 500px;
   height: 100%;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 
 #imagebox {
     width: 500px;
     /*Height is placeholder only */
     height: 375px;
-    margin: 20px auto;
+    margin: 10px auto;
 }
 
 #playbutton {
