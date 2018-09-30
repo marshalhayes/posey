@@ -88,7 +88,8 @@ function startTimer() {
       if(misses == 1){
         $("#lifeTwo").addClass("dead"); 
       }        
-    }      
-     
-  }, 1000)
+
+    }
+  }, 1000);
 }
+
