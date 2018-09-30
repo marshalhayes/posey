@@ -29,6 +29,10 @@ body {
   margin: 0 auto;
 }
 
+#mainTitle {
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 3rem;
+}
 @media only screen and (max-width: 1000px) {
   .text-center, .container-fluid {
     display: none;
