@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 let hours = 0;
 let mins = 0;
 let seconds = 0;
@@ -60,6 +58,6 @@ function startTimer() {
         $("#lifeTwo").addClass("dead"); 
       }        
     }
-  }, 1000)
+  }, 1000);
 }
->>>>>>> 1d486319ff68752c481f96c64b8b17d310e3d376
+
